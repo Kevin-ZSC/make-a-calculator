@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>make a calculate</title>
+</head>
+<body>
+    <div class="cal-box">
+        <input type="text" id="display" name="display">
+        <div class="btn">
+
+            <div class="r1">
+                <button class="spa" value="AC" onclick="display.value = ''">AC</button>
+                <button class="spa" value="DE" onclick="display.value = display.value.toString().slice(0,-1)">DE</button>
+                <button class="spa" value="%" onclick="display.value = display.value/100">%</button>
+                <button class="opr" value="/" onclick="display.value += '/'">÷</button>
+            </div>
+            <div class="r2">
+                <button class="number" value="7" onclick="display.value += '7'">7</button>
+                <button class="number" value="8" onclick="display.value += '8'">8</button>
+                <button class="number" value="9" onclick="display.value += '9'">9</button>
+                <button class="opr" value="*" onclick="display.value += '*'">x</button>
+            </div>
+            <div class="r3">
+                <button class="number" value="4" onclick="display.value += '4'">4</button>
+                <button class="number" value="5" onclick="display.value += '5'">5</button>
+                <button class="number" value="6" onclick="display.value += '6'">6</button>
+                <button class="opr" value="-" onclick="display.value += '-'">-</button>
+            </div>
+            <div class="r4">  
+                <button class="number" value="1" onclick="display.value += '1'">1</button>
+                <button class="number" value="2" onclick="display.value += '2'">2</button>
+                <button class="number" value="3" onclick="display.value += '3'">3</button>
+                <button class="opr" value="+" onclick="display.value += '+'">+</button>
+            </div>
+            <div class="r5">
+                <button class="zero number" value="0" onclick="display.value += '0'">0</button>
+                <button class="number" value="." onclick="display.value += '.'">.</button>
+                <button class="opr" value="=" onclick="display.value = eval(display.value)">=</button>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        const result = document.querySelector('#display');
+        if(result.length>10) {
+            result.style.fontSize = '8px';
+        }
+
+    </script>
+</body>
+</html>
